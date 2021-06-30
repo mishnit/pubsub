@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SubscriberSpec" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-10-26T03:03:33" hostname="ssrinivasan--MacBookPro15" time="0.004">
+  <properties/>
+  <testcase name="Test subscriber instantiation" classname="SubscriberSpec" time="0.002"/>
+  <testcase name="Test subscriber subscribe" classname="SubscriberSpec" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,48 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'org.nitin'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java.srcDir "src/main/java"
+    }
+    test {
+        java.srcDir "src/test/groovy"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.6', ext: 'pom'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '2.0-M3-groovy-3.0'
+
+    compile 'org.codehaus.gmavenplus:gmavenplus-plugin:1.10.1'
+    compile 'com.google.guava:guava:30.0-jre'
+}
+
+
+//create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Pubsub',
+                'Main-Class': 'MainApp'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PubSubSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-10-26T03:03:33" hostname="ssrinivasan--MacBookPro15" time="0.152">
+  <properties/>
+  <testcase name="Test Publish and Subscribe basic test" classname="PubSubSpec" time="0.105"/>
+  <testcase name="Test Publish and Subscribe with no records in the topic" classname="PubSubSpec" time="0.005"/>
+  <testcase name="Test Publish and Subscribe loop test" classname="PubSubSpec" time="0.029"/>
+  <testcase name="Test Publish and Subscribe rewind" classname="PubSubSpec" time="0.002"/>
+  <testcase name="Test Subscriber subscribes from topic which does not have a produced - exception is thrown" classname="PubSubSpec" time="0.01"/>
+  <testcase name="Test Subscriber is not registered - exception is thrown" classname="PubSubSpec" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
